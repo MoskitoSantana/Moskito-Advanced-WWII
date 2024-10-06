@@ -1,0 +1,22 @@
+name = "Moskito Santana Advanced WWII "
+author = "MoskitoSantana"
+prefix = "mawii"
+mainprefix = "z"
+
+[files]
+include = [
+    "mod.cpp",        # These files are copied to the build directory by default
+    "meta.cpp",       # They do not need to be added to your list
+    "LICENSE",
+    "logo_ca.paa",
+    "logo_co.paa",
+    "python_code/**", # Copy the folder "python_code" including all its files
+]
+exclude = [
+    "*.psd",          # By default this list is empty
+    "addons/main/README.md",
+]
+
+[properties]
+author = "Moskito Santana"
+url = "https://github.com/MoskitoSantana/mawii"
