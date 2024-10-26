@@ -1,4 +1,4 @@
-#include "\z\mawii\addons\ww2_modules\script_component.hpp"
+#include "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\script_component.hpp"
 #include "us_weapons.hpp"
 #include "uk_weapons.hpp"
 #include "ger_weapons.hpp"
@@ -43,9 +43,9 @@
 #define ADD_SAPPER_TOOLS(unit) { ADD_ITEM_ON_UNIT((unit),_x,(1)) } forEach SAPPER_TOOLS;
 
 #define ADD_ITEM_ON_UNIT(unit,item,ammount) for "index" from 1 to (ammount) do { (unit) addItem (item); }
-#define ADD_ITEM_ON_VEST(unit,item,ammount) for "index" from 1 to (ammount) do { (unit) addItemToVest (item); }
-#define ADD_ITEM_ON_BACKPACK(unit,item,ammount) for "index" from 1 to (ammount) do { (unit) addItemToBackpack (item); }
-#define ADD_ITEM_ON_UNIFORM(unit,item,ammount) for "index" from 1 to (ammount) do { (unit) addItemToUniform (item); }
+#define ADD_ITEM_ON_VEST(unit,item,ammount) if ((unit) canAddItemToVest (item)) then { for "index" from 1 to (ammount) do { (unit) addItemToVest (item); } } else { ADD_ITEM_ON_UNIT((unit),(item),(ammount)) }
+#define ADD_ITEM_ON_BACKPACK(unit,item,ammount) if ((unit) canAddItemToBackpack (item)) then { for "index" from 1 to (ammount) do { (unit) addItemToBackpack (item); } } else { ADD_ITEM_ON_UNIT((unit),(item),(ammount)) }
+#define ADD_ITEM_ON_UNIFORM(unit,item,ammount) if ((unit) canAddItemToUniform (item)) then { for "index" from 1 to (ammount) do { (unit) addItemToUniform (item); } } else { ADD_ITEM_ON_UNIT((unit),(item),(ammount)) } 
 
 #define ADD_UNIFORM_BASED_ON(unit,medic_uniforms,nco_uniforms,soldier_uniforms,pilot_uniforms,tankcrewuniforms) removeUniform (unit);\
  private _unitrole = (unit) getVariable ["current_player_description",ROLE_RIFLEMAN];\

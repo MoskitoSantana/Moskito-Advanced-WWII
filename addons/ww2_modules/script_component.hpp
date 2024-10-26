@@ -1,6 +1,6 @@
-#define COMPONENT modules
-#define COMPONENT_BEAUTIFIED Modules
-#include "\z\mawii\addons\main\script_mod.hpp"
+#define COMPONENT ww2_modules
+#define COMPONENT_BEAUTIFIED WW2 Modules
+#include "\~MAINPREFIX~\~PREFIX~\addons\main\script_mod.hpp"
 
 // Disables CBA precaching, which interferes with file patching
 #define DISABLE_COMPILE_CACHE
@@ -12,7 +12,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_WP
 #endif
 
-#include "\z\mawii\addons\main\script_macros.hpp"
+#include "\~MAINPREFIX~\~PREFIX~\addons\main\script_macros.hpp"
 
 // Roles
 

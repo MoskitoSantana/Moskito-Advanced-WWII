@@ -1,7 +1,7 @@
 name = "Moskito Advanced WWII "
 author = "MoskitoSantana"
 prefix = "mawii"
-mainprefix = "z"
+mainprefix = "k"
 
 [files]
 include = [

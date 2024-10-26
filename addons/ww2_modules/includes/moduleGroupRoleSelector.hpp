@@ -1,7 +1,7 @@
 class MAWII_ModuleRoleSelectorForGroups : MAWII_BaseModule {
     scope = 2;
     displayName = "Group Role Selector";
-    icon = "\z\mawii\addons\ww2_modules\data\role_setup_variant_2.paa";
+    icon = "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\data\role_setup_variant_2.paa";
     category = "MAWII";
 
     function = QFUNC(moduleGroupRoleSelector);

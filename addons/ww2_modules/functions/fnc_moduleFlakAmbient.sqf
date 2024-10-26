@@ -28,6 +28,8 @@ switch _mode do {
 			while { true } do {
 //				{
 					_position = [_module] call BIS_fnc_randomPosTrigger;
+					_position set [0, (_position select 0) + (random [-200,0,350])];
+					_position set [1, (_position select 1) + (random [-200,0,350])];
 					_position set [2, (_position select 2) + (random [100,400,4000])];
  					_ammo = "LIB_SprGr_FlaK_38_APHE_T"; 
   					[ _position , objNull , _ammo ] call LIB_SYSTEM_FLAK_fnc_createFlakExplosion; 
@@ -35,7 +37,7 @@ switch _mode do {
 //  					[ _x , objNull , _ammo ] call LIB_SYSTEM_FLAK_fnc_createFlakExplosion; 
 //					sleep 0.7;
 //				} forEach _positions;
-				sleep 10;
+				sleep 0.5;
 			}
         };
     };

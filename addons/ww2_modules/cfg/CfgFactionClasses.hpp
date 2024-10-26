@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class MAWII {
-        displayName = "MAWII Modules"; // Todo: Localize String
+        displayName = "MAWII WW2 Modules"; // Todo: Localize String
         side = 7;
     };
 };
