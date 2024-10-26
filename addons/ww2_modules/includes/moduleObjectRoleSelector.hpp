@@ -1,7 +1,7 @@
 class MAWII_ModuleRoleSelector : MAWII_BaseModule {
     scope = 2;
     displayName = "Object Role Selector";
-    icon = "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\data\role_setup_variant_2.paa";
+    icon = "\k\mawii\addons\ww2_modules\data\object_role_setup.paa";
     category = "MAWII";
 
     function = QFUNC(moduleRoleSelector);

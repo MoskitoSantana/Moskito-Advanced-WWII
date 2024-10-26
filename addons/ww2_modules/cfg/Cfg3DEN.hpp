@@ -1,4 +1,4 @@
-#include "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\functions\script_component.hpp"
+#include "\k\mawii\addons\ww2_modules\functions\script_component.hpp"
 
 class Cfg3DEN {
     class Object {

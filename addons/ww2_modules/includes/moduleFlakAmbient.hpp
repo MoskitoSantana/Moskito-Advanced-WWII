@@ -1,7 +1,7 @@
 class MAWII_ModuleFakAmbient : MAWII_BaseModule {
     scope = 2;
     displayName = "Flak Ambient";
-    icon = "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\data\role_setup_variant_2.paa";
+    icon = "\k\mawii\addons\ww2_modules\data\flak_ambient_icon.paa";
     category = "MAWII";
 
     function = QFUNC(moduleFlakAmbient);

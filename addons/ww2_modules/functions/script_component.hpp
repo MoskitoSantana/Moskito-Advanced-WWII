@@ -1,4 +1,4 @@
-#include "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\script_component.hpp"
+#include "\k\mawii\addons\ww2_modules\script_component.hpp"
 #include "us_weapons.hpp"
 #include "uk_weapons.hpp"
 #include "ger_weapons.hpp"

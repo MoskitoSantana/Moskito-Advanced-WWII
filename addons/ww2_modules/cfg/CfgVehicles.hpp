@@ -40,9 +40,9 @@ class CfgVehicles
         };
     };
 
-    #include "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\includes\moduleGroupRoleSelector.hpp"
-    #include "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\includes\moduleObjectRoleSelector.hpp"
-    #include "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\includes\moduleFlakAmbient.hpp"
+    #include "\k\mawii\addons\ww2_modules\includes\moduleGroupRoleSelector.hpp"
+    #include "\k\mawii\addons\ww2_modules\includes\moduleObjectRoleSelector.hpp"
+    #include "\k\mawii\addons\ww2_modules\includes\moduleFlakAmbient.hpp"
 
 
 	//class TAG_Module_Nuke : Module_F

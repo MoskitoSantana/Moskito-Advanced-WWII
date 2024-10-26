@@ -1,5 +1,5 @@
-#define PREFIX ~PREFIX~
-#define MAINPREFIX ~MAINPREFIX~
+#define PREFIX mawii
+#define MAINPREFIX k
 
 #include "script_version.hpp"
 #define VERSION         MAJOR.MINOR

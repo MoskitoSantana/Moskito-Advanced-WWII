@@ -1,1 +1,1 @@
-#include "\~MAINPREFIX~\~PREFIX~\addons\ww2_modules\script_component.hpp"
+#include "\k\mawii\addons\ww2_modules\script_component.hpp"
