@@ -7,7 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main"
+            "cba_main",
+            "ace_main",
+            //"simc_uaf_44"
         };
         author = "Moskito Santana";
         VERSION_CONFIG;

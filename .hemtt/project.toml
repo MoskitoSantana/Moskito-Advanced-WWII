@@ -1,4 +1,4 @@
-name = "Moskito Santana Advanced WWII "
+name = "Moskito Advanced WWII "
 author = "MoskitoSantana"
 prefix = "mawii"
 mainprefix = "z"
@@ -10,6 +10,16 @@ include = [
     "LICENSE",
     "logo_ca.paa",
     "logo_co.paa",
+    "*.p3d",
+    "*.paa",
+    "*.ogg",
+    "*.txt",
+    "*.ext",
+    "*.xml",
+    "*.md",
+    "*.sqf",
+    "*.sqfc",
+    "*.fxy",
     "python_code/**", # Copy the folder "python_code" including all its files
 ]
 exclude = [
@@ -19,4 +29,40 @@ exclude = [
 
 [properties]
 author = "Moskito Santana"
-url = "https://github.com/MoskitoSantana/mawii"
+github = "https://github.com/MoskitoSantana/mawii"
+
+[hemtt.launch.default]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+# Mission to launch directly into the editor with
+parameters = [
+    "-skipIntro",           # These parameters are passed to the Arma 3 executable
+    "-noSplash",            # They do not need to be added to your list
+    "-showScriptErrors",    # You can add additional parameters here
+    "-debug",
+    "-filePatching",
+]
+executable = "arma3_x64" # Default: "arma3_x64"
+file_patching = false # Default: true
+binarize = true # Default: false
+rapify = false # Default: true
+
+# Launched with `hemtt launch vn`
+
+
+# Launched with `hemtt launch ace`
+[hemtt.launch.ace]
+extends = "default"
+workshop = [
+    "463939057", # ACE3's Workshop ID
+    "450814997", # CBA_A3's Workshop ID,
+    "2648308937",
+    "1399447232",
+    "623475643", # Eden Enhanced
+    "1923321700" , # Eden OT&T
+    "2369477168" ,# Advanced Developer Tools,
+    "940225861"
+]
+
+mission = "TrainingField.VR"

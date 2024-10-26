@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="Moskito Santana AdvancedWWII">
+	<Package name="modules">
+			<Key ID="ModuleRoleSetUp_DisplayName">
+				<English>Selector de Rol</English>
+			</Key>
+        	<Key ID="ModuleRoleSetUp_ModuleDescription_Description">
+				<English>Establece el rol de los soldados en el mapa.</English>
+			</Key>
+            <Key ID="ModuleRoleSetUp_RoleProperty">
+				<English>Rol</English>
+			</Key>
+            <Key ID="ModuleRoleSetUp_RoleProperty_DisplayName">
+				<English>Seleccionar Rol</English>
+			</Key>
+            <Key ID="ModuleRoleSetUp_RoleProperty_Tooltip">
+				<English>Seleccionar Rol</English>
+			</Key>
+            <Key ID="ModuleRoleSetup_RiflemanRole">
+				<English>Fusilero</English>
+			</Key>
+			<Key ID="ModuleRoleSetup_MedicRole">
+				<English>Medico</English>
+			</Key>
+			<Key ID="ModuleRoleSetup_MachinneGunnerFirstClassRole">
+				<English>Ametrallador de primera clase</English>
+			</Key>
+			<Key ID="STR_mawii_modules_RiflemanROLE"> 
+				<Spanish>Armar %1</Spanish>
+				<English>Set %1</English>
+			</Key>      
+			<Key ID="STR_MAWII_modules_testingstrings"> 
+				<English>Warfare</English>
+			</Key>      
+			      	
+    </Package>
+</Project>

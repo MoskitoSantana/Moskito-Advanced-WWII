@@ -1,0 +1,7 @@
+#define UK_MAIN_WEAPON_ENFIELD ["LIB_LeeEnfield_No1","LIB_10Rnd_770x56",7,10]
+#define UK_MAIN_WEAPON_ENFIELD_OPTIC ["LIB_LeeEnfield_No4_Scoped","LIB_10Rnd_770x56",7,5]
+#define UK_MAIN_WEAPON_STEN ["LIB_Sten_Mk5","LIB_32Rnd_9x19_Sten",7,32]
+#define UK_MAIN_WEAPON_BREN ["LIB_Bren_Mk2","LIB_30Rnd_770x56_MKVIII",7,30]
+
+#define UK_LAUNCHER_WEAPON_PZFAUST ["LIB_PzFaust_30m","1Rnd_LIB_PzFaust_30m",2,1]
+#define UK_LAUNCHER_WEAPON_RPBZ ["LIB_RPzB","LIB_1Rnd_RPzB",2,1]

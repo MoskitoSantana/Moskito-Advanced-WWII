@@ -1,0 +1,17 @@
+[binarize]
+enabled = false # Default: true
+include = [
+    "data/*.p3d",
+    "data/*.paa"
+]
+
+
+[files]
+exclude = [
+    ".vscode/**/*", # Exclude all files in the .vscode folder
+    "data/*.psd",
+]
+include = [
+    "data/*.p3d",
+    "data/*.paa"
+]

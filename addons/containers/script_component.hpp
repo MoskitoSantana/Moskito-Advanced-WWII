@@ -1,4 +1,4 @@
-#define COMPONENT module
+#define COMPONENT modules
 #define COMPONENT_BEAUTIFIED Modules
 #include "\z\mawii\addons\main\script_mod.hpp"
 
