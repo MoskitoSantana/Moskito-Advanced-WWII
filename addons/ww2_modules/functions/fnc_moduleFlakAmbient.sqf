@@ -30,7 +30,7 @@ switch _mode do {
 					_position = [_module] call BIS_fnc_randomPosTrigger;
 					_position set [0, (_position select 0) + (random [-200,0,350])];
 					_position set [1, (_position select 1) + (random [-200,0,350])];
-					_position set [2, (_position select 2) + (random [100,400,4000])];
+					_position set [2, (_position select 2) + (random [400,2000,4000])];
  					_ammo = "LIB_SprGr_FlaK_38_APHE_T"; 
   					[ _position , objNull , _ammo ] call LIB_SYSTEM_FLAK_fnc_createFlakExplosion; 
 

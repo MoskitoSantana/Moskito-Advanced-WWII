@@ -13,13 +13,13 @@ _statement = {
 	private _unitClass = _roleClass select 0; 
 	private _faction = _roleClass select 1; 
 	
-	SET_AS_ACE_EOD_IF( _player, IS_ROLE(_unitClass,ROLE_SAPPER) );
-	SET_AS_ACE_MEDIC_IF( _player, IS_ROLE(_unitClass,ROLE_MEDIC) );
-	SET_AS_ACE_ENGINEER_IF( _player, IS_ROLE(_unitClass,ROLE_SAPPER) );
+	SET_AS_ACE_EOD_IF(_player,IS_ROLE(_unitClass,ROLE_SAPPER));
+	SET_AS_ACE_MEDIC_IF(_player,IS_ROLE(_unitClass,ROLE_MEDIC));
+	SET_AS_ACE_ENGINEER_IF(_player,IS_ROLE(_unitClass,ROLE_SAPPER));
 	
-	SET_VANILLA_TRAIT_IF(_player,"Medic",IS_ROLE_BOOL(_unitClass,ROLE_MEDIC) );
-	SET_VANILLA_TRAIT_IF(_player, "engineer", IS_ROLE_BOOL(_unitClass,ROLE_SAPPER) );
-	SET_VANILLA_TRAIT_IF(_player, "explosiveSpecialist", IS_ROLE_BOOL(_unitClass,ROLE_SAPPER) );
+	SET_VANILLA_TRAIT_IF(_player,Medic,IS_ROLE_BOOL(_unitClass,ROLE_MEDIC));
+	SET_VANILLA_TRAIT_IF(_player,engineer, IS_ROLE_BOOL(_unitClass,ROLE_SAPPER));
+	SET_VANILLA_TRAIT_IF(_player,explosiveSpecialist, IS_ROLE_BOOL(_unitClass,ROLE_SAPPER));
 
 	_player setVariable ["current_player_description", _unitClass, clientOwner];
 

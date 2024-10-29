@@ -1,5 +1,5 @@
-#define COMPONENT ww2_modules
-#define COMPONENT_BEAUTIFIED WW2 Modules
+#define COMPONENT ww2_vehicles
+#define COMPONENT_BEAUTIFIED WW2 Vehicles
 #include "\k\mawii\addons\main\script_mod.hpp"
 
 // Disables CBA precaching, which interferes with file patching
@@ -13,5 +13,3 @@
 #endif
 
 #include "\k\mawii\addons\main\script_macros.hpp"
-
-

@@ -2,9 +2,9 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            "MAWII_ModuleRoleSelectorForGroups",
-            "MAWII_ModuleRoleSelector",
-            "MAWII_ModuleFakAmbient"
+            "MAWII_US_RADIO_TRUCK",
+            "MAWII_SOV_RADIO_TRUCK",
+            "MAWII_GER_RADIO_TRUCK"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -21,7 +21,7 @@ class CfgPatches {
         };
         author = "Moskito Santana";
         url = "https://github.com/MoskitoSantana/mawii";
-        is3DENMod = 1;
+        is3DENMod = 0;
         VERSION_CONFIG;
         skipWhenMissingDependencies = 1;
     };

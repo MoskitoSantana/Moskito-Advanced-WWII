@@ -61,7 +61,9 @@ workshop = [
     "623475643", # Eden Enhanced
     "1923321700" , # Eden OT&T
     "2369477168" ,# Advanced Developer Tools,
-    "940225861"
+    "940225861",
+    "2423977008", # WW2 PHONES
+    "894678801" # TFAR
 ]
 
 mission = "TrainingField.VR"

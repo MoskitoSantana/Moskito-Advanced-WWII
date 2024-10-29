@@ -1,0 +1,1 @@
+#include "\k\mawii\addons\ww2_vehicles\script_component.hpp"
