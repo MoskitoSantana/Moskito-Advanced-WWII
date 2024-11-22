@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - master
-  pull_request_target:
 
 jobs:
   build:
@@ -19,4 +18,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: mawii-latest-{{github.sha}}
-          path: releases/
+          path: .hemttout/@*
+          include-hidden-files: true # Because .hemttout is a hidden directory
