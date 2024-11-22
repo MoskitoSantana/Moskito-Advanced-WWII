@@ -7,6 +7,14 @@ on:
   pull_request:
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@master
+      - name: Check for BOM
+        uses: arma-actions/bom-check@master  
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -19,5 +27,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: "@mawii"
-          path: .hemttout/release/@*
+          path: ".hemttout/release/*"
           include-hidden-files: true # Because .hemttout is a hidden directory
