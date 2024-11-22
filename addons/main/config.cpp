@@ -33,3 +33,5 @@ class CfgMods {
         description = "";
     };
 };
+
+#include "cfg\CfgFaces.hpp"

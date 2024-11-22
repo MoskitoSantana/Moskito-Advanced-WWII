@@ -20,7 +20,7 @@
 #define GET_FACTION(faction,squadclass,ambient) (faction) * (squadclass) + (ambient)
 
 #define COMMON_OBJECTS [ "ACE_CableTie" , "ACE_CableTie" , "ACE_CableTie" , "ACE_EarPlugs" , "acex_intelitems_notepad", "ACE_EntrenchingTool" ]
-#define COMMON_LINKED_OBJECTS [ "ItemWatch", "ItemCompass", "ItemMap", "LIB_Binocular_US" ]
+#define COMMON_LINKED_OBJECTS [ "ItemWatch", "ItemCompass", "ItemMap" ]
 #define COMMON_MEDICAL_LOADOUT []
 #define MEDIC_MEDICAL_LOADOUT []
 
@@ -36,3 +36,5 @@
 #define ADD_ITEM_ON_VEST(unit,item,ammount) if ((unit) canAddItemToVest (item)) then { for "index" from 1 to (ammount) do { (unit) addItemToVest (item); } } else { ADD_ITEM_ON_UNIT((unit),(item),(ammount)) }
 #define ADD_ITEM_ON_BACKPACK(unit,item,ammount) if ((unit) canAddItemToBackpack (item)) then { for "index" from 1 to (ammount) do { (unit) addItemToBackpack (item); } } else { ADD_ITEM_ON_UNIT((unit),(item),(ammount)) }
 #define ADD_ITEM_ON_UNIFORM(unit,item,ammount) if ((unit) canAddItemToUniform (item)) then { for "index" from 1 to (ammount) do { (unit) addItemToUniform (item); } } else { ADD_ITEM_ON_UNIT((unit),(item),(ammount)) } 
+
+#define RANOM_POS_LAND [(random 0.2) -0.1, (random 0.2) -0.1, 0]

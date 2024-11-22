@@ -3,4 +3,4 @@
 params ["_unit"];
 
 { _unit addItemToUniform _x; } forEach COMMON_OBJECTS;
-{ _unit linkItem _x; } forEach COMMON_LINKED_OBJECTS;
+{ _unit assignItem _x; } forEach COMMON_LINKED_OBJECTS;

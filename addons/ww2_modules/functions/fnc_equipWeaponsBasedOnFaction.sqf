@@ -10,7 +10,9 @@ switch (_faction) do {
 	case WEAPON_FACTION_USA : {
 		switch ( (_unit getVariable ["current_player_description", roleDescription _unit]) ) do {
 			case ROLE_RTO : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_MAIN_WEAPON_M1_CARABINE);
+				_unit addWeapon "LIB_Binocular_US";
+				_mainWeapon = (selectRandom [ARR_2(US_MAIN_WEAPON_M1_CARABINE,US_MAIN_WEAPON_M1_GARAND)]); 
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,FLARE_GUN);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_red",2,1);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_green",2,1);
@@ -39,7 +41,9 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
 			case ROLE_SQUAD_LEADER : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_MAIN_WEAPON_M1_CARABINE);
+				_unit addWeapon "LIB_Binocular_US";
+				_mainWeapon = (selectRandom [ARR_2(US_MAIN_WEAPON_M1_CARABINE,US_MAIN_WEAPON_M1_GARAND,US_MAIN_WEAPON_THOMPSON)]); 
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
@@ -63,6 +67,7 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
 			case ROLE_SNIPPER : {
+				_unit addWeapon "LIB_Binocular_US";
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_MAIN_WEAPON_SPRINGFIELD);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
@@ -75,7 +80,19 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
+			case ROLE_TANK_CREW : {
+				_unit addWeapon "LIB_Binocular_US";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_MAIN_WEAPON_M3);
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",2,1);
+			};
+			case ROLE_PILOT : {
+				_unit addWeapon "LIB_Binocular_US";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",2,1);
+			};
 			default  {
+				systemChat (localize "STR_MAWII_WW2_Modules_TankCrew");
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_MAIN_WEAPON_M1_GARAND);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
@@ -84,8 +101,9 @@ switch (_faction) do {
 		};
 	};
 	case WEAPON_FACTION_UK : {
-	switch ( (_unit getVariable ["current_player_description", roleDescription _unit]) ) do {
+		switch ( (_unit getVariable ["current_player_description", roleDescription _unit]) ) do {
 			case ROLE_RTO : {
+				_unit addWeapon "LIB_Binocular_UK";
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,UK_MAIN_WEAPON_ENFIELD);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,FLARE_GUN);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_red",2,1);
@@ -115,7 +133,9 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
 			case ROLE_SQUAD_LEADER : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,UK_MAIN_WEAPON_STEN);
+				_mainWeapon = (selectRandom [ARR_2(UK_MAIN_WEAPON_STEN,UK_MAIN_WEAPON_ENFIELD)]);
+				_unit addWeapon "LIB_Binocular_UK";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
@@ -133,12 +153,14 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
 			case ROLE_ASSAULT_RIFLEMAN : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,UK_MAIN_WEAPON_STEN);
+				_mainWeapon = (selectRandom [ARR_2(UK_MAIN_WEAPON_STEN,US_MAIN_WEAPON_THOMPSON)]);
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon); 
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
 			case ROLE_SNIPPER : {
+				_unit addWeapon "LIB_Binocular_UK";
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,UK_MAIN_WEAPON_ENFIELD_OPTIC);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
@@ -151,6 +173,17 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
+			case ROLE_TANK_CREW : {
+				_unit addWeapon "LIB_Binocular_UK";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,UK_MAIN_WEAPON_STEN);
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",2,1);
+			};
+			case ROLE_PILOT : {
+				_unit addWeapon "LIB_Binocular_UK";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",2,1);
+			};
 			default  {
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,UK_MAIN_WEAPON_ENFIELD);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
@@ -162,11 +195,17 @@ switch (_faction) do {
 	case WEAPON_FACTION_GER : {
 		switch ( (_unit getVariable ["current_player_description", roleDescription _unit]) ) do {
 			case ROLE_RTO : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_MAIN_WEAPON_G43);
+				_unit addWeapon "LIB_Binocular_GER";
+				_mainWeapon = (selectRandom [ARR_3(GER_MAIN_WEAPON_G43,GER_MAIN_WEAPON_K98,GER_MAIN_WEAPON_MP40)]); 
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,FLARE_GUN);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_red",2,1);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_green",2,1);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_yellow",2,1);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18_Red",2,1);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18_Green",2,1);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18_Yellow",2,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",4,1);
 			};
 			case ROLE_MEDIC : {
@@ -175,7 +214,8 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",3,1);
 			};
 			case ROLE_SAPPER : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_MAIN_WEAPON_MP40);
+				_mainWeapon = (selectRandom [ARR_3(GER_MAIN_WEAPON_G43,GER_MAIN_WEAPON_K98,GER_MAIN_WEAPON_MP40)]); 
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_GUN_WEAPON_P38);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_Shg24",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",1,1);
@@ -188,7 +228,9 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",1,1);
 			};
 			case ROLE_SQUAD_LEADER : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_MAIN_WEAPON_MP44);
+				_unit addWeapon "LIB_Binocular_GER";
+				_mainWeapon = (selectRandom [ARR_3(GER_MAIN_WEAPON_G43,GER_MAIN_WEAPON_MP44,GER_MAIN_WEAPON_MP40)]); 
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_GUN_WEAPON_P08);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_Shg24",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",1,1);
@@ -212,20 +254,34 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",1,1);
 			};
 			case ROLE_SNIPPER : {
+				_unit addWeapon "LIB_Binocular_GER";
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_MAIN_WEAPON_K98Z);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_GUN_WEAPON_P38);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_Shg24",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",2,1);
 			};
 			case ROLE_AT_SPECIALIST : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_MAIN_WEAPON_G43);
+				_mainWeapon = (selectRandom [ARR_2(GER_MAIN_WEAPON_G43,GER_MAIN_WEAPON_K98)]); 
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_GUN_WEAPON_P38);
 				ADD_WEAPON_AND_MAGAZINES_ON_BACKPACK(_unit,GER_LAUNCHER_WEAPON_RPBZ);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_Shg24",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",1,1);
 			};
+			case ROLE_TANK_CREW : {
+				_unit addWeapon "LIB_Binocular_GER";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_MAIN_WEAPON_MP40);
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_GUN_WEAPON_P08);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",2,1);
+			};
+			case ROLE_PILOT : {
+				_unit addWeapon "LIB_Binocular_GER";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_GUN_WEAPON_P08);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",2,1);
+			};			
 			default  {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_MAIN_WEAPON_K98);
+				_mainWeapon = (selectRandom [ARR_3(GER_MAIN_WEAPON_G43,GER_MAIN_WEAPON_K98,GER_MAIN_WEAPON_MP40)]); 
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,GER_LAUNCHER_WEAPON_PZFAUST);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_Shg24",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_NB39",1,1);
@@ -235,7 +291,9 @@ switch (_faction) do {
 	case WEAPON_FACTION_SOV : {
 		switch ( (_unit getVariable ["current_player_description", roleDescription _unit]) ) do {
 			case ROLE_RTO : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_MAIN_WEAPON_SVT40);
+				_unit addWeapon "LIB_Binocular_SU";
+				_mainWeapon = (selectRandom [ARR_2(SOV_MAIN_WEAPON_SVT40,SOV_MAIN_WEAPON_M9130)]);  
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,FLARE_GUN);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_red",2,1);
 				ADD_MAGAZINE_CARGO_ON_BACKPACK(_unit,"lib_1Rnd_flare_green",2,1);
@@ -251,7 +309,8 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",3,1);
 			};
 			case ROLE_SAPPER : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_MAIN_WEAPON_M9130);
+				_mainWeapon = (selectRandom [ARR_2(SOV_MAIN_WEAPON_SVT40,SOV_MAIN_WEAPON_M9130)]);  
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_GUN_WEAPON_T33);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
@@ -264,7 +323,9 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
 			case ROLE_SQUAD_LEADER : {
-				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_MAIN_WEAPON_SVT40);
+				_unit addWeapon "LIB_Binocular_SU";
+				_mainWeapon = (selectRandom [ARR_3(SOV_MAIN_WEAPON_SVT40,SOV_MAIN_WEAPON_M9130,SOV_MAIN_WEAPON_PPSH_M)]);  
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_GUN_WEAPON_M1895);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
@@ -288,6 +349,7 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
 			case ROLE_SNIPPER : {
+				_unit addWeapon "LIB_Binocular_SU";
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_MAIN_WEAPON_M9130PU);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_GUN_WEAPON_T33);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
@@ -300,6 +362,17 @@ switch (_faction) do {
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",1,1);
 			};
+			case ROLE_TANK_CREW : {
+				_unit addWeapon "LIB_Binocular_SU";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_MAIN_WEAPON_PPSH_M);
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_GUN_WEAPON_T33);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",2,1);
+			};
+			case ROLE_PILOT : {
+				_unit addWeapon "LIB_Binocular_SU";
+				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_GUN_WEAPON_T33);
+				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_M18",2,1);
+			};			
 			default  {
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_MAIN_WEAPON_M9130);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,SOV_GUN_WEAPON_T33);

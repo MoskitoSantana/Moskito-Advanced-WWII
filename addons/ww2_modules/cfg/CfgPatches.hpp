@@ -12,12 +12,12 @@ class CfgPatches {
             "cba_main",
             "ace_main",
             "mawii_main",
-            "ace_medical_engine",
+            "ace_common",
+            "ace_field_rations",
             "ace_medical_treatment",
-            "WW2_Assets_c_Vehicles_StaticWeapons_c_Flak_38",
-            "WW2_Core_c_WW2_Core_c",
-            "ww2_core_c_if_zzz_lastloaded_c",
-            "ww2_assets_c_weapons_infantryweapons_c"
+            "ace_flashlights",
+            "WW2_Assets_c_Weapons_Misc_c_Arsenal",
+            "WW2_Core_c_WW2_EditorPreviews_c"
         };
         author = "Moskito Santana";
         url = "https://github.com/MoskitoSantana/mawii";

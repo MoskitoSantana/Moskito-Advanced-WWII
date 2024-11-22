@@ -118,6 +118,20 @@ class MAWII_ModuleRoleSelector : MAWII_BaseModule {
             defaultValue = "true";
             typeName = "BOOL";
         };
+        class RoleTankCrew : Checkbox {
+            property = QGVAR(MAWII_ModuleRoleSelector_RoleTankCrew);
+            displayName = "Tank Crew";
+            tooltip = "";
+            defaultValue = "true";
+            typeName = "BOOL";
+        };
+        class RolePilot : Checkbox {
+            property = QGVAR(MAWII_ModuleRoleSelector_RolePilot);
+            displayName = "Pilot";
+            tooltip = "";
+            defaultValue = "true";
+            typeName = "BOOL";
+        };
         class ModuleDescription: ModuleDescription {};
     };
 

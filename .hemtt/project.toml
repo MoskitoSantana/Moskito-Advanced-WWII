@@ -19,7 +19,7 @@ include = [
     "*.sqf",
     "*.sqfc",
     "*.fxy",
-    "python_code/**", # Copy the folder "python_code" including all its files
+    #"python_code/**", # Copy the folder "python_code" including all its files
 ]
 exclude = [
     "*.psd",          # By default this list is empty
@@ -28,7 +28,7 @@ exclude = [
 
 [properties]
 author = "Moskito Santana"
-github = "https://github.com/MoskitoSantana/mawii"
+github = "https://github.com/MoskitoSantana/Moskito-Advanced-WWII"
 
 [hemtt.launch.default]
 workshop = [
@@ -56,12 +56,12 @@ extends = "default"
 workshop = [
     "463939057", # ACE3's Workshop ID
     "450814997", # CBA_A3's Workshop ID,
-    "2648308937",
-    "1399447232",
+    "2648308937", # IFA
+    "1399447232", # US General Equipment And Accesories
     "623475643", # Eden Enhanced
     "1923321700" , # Eden OT&T
     "2369477168" ,# Advanced Developer Tools,
-    "940225861",
+    "940225861", # Rismar Static Animatins (Bullshit Testing)
     "2423977008", # WW2 PHONES
     "894678801" # TFAR
 ]

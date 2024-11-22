@@ -26,9 +26,8 @@ private _squadLeaderRole = _module getVariable [QUOTE(RoleSquadLeader), false];
 private _machinneGunnerRole = _module getVariable [QUOTE(RoleMachinneGunner), false];
 private _assaultRiflemanRole = _module getVariable [QUOTE(RoleAssaultRifleman), false];
 private _firstClassMachinneGunnerRole = _module getVariable [QUOTE(RoleFirstClassMachinneGunner), false];
-
-
-copyToClipboard str _faction;
+private _pilotRole = _module getVariable [QUOTE(RolePilot), false];
+private _tankCrewRole = _module getVariable [QUOTE(RoleTankCrew), false];
 
 switch _mode do {
     case "init": {
@@ -46,6 +45,8 @@ switch _mode do {
                 if (_machinneGunnerRole) then { [_x, _faction,ROLE_MACHINNE_GUNNER] call FUNC(addRoleActionOnSyncObject); };
                 if (_assaultRiflemanRole) then { [_x, _faction,ROLE_ASSAULT_RIFLEMAN] call FUNC(addRoleActionOnSyncObject); };
                 if (_firstClassMachinneGunnerRole) then { [_x,_faction,ROLE_FIRST_CLASS_MACHINNE_GUNNER] call FUNC(addRoleActionOnSyncObject); };
+                if (_pilotRole) then { [_x,_faction,ROLE_PILOT] call FUNC(addRoleActionOnSyncObject); };
+                if (_tankCrewRole) then { [_x,_faction,ROLE_TANK_CREW] call FUNC(addRoleActionOnSyncObject); };
             } forEach _syncObjects;
         } else {
 			hint "ELSE: Select a faction and a squad type";

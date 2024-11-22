@@ -31,9 +31,13 @@ private _firstClassMachinneGunnerRole = _module getVariable [QUOTE(RoleFirstClas
 
 switch _mode do {
     case "init": {
-        if (is3DEN) exitWith {};
+        if (is3DEN) exitWith {
+            private _syncObjects = synchronizedObjects _module select {!(_x isKindOf "AnyBrain")};
+            { 
+                [_x, _faction, _x getVariable ['current_player_description', ROLE_RIFLEMAN] ] call FUNC(addRoleOnStartup);
+            } forEach _syncObjects;
+        };
         if (_isActivated) then {
-			
             private _syncObjects = synchronizedObjects _module select {!(_x isKindOf "AnyBrain")};
             { 
                 [_x, _faction, _x getVariable ['current_player_description', ROLE_RIFLEMAN] ] call FUNC(addRoleOnStartup);

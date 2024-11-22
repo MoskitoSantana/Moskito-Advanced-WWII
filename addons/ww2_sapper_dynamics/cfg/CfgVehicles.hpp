@@ -1,3 +1,0 @@
-class CfgVehicles {
-	class Man;
-};

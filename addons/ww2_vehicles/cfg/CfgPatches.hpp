@@ -11,13 +11,12 @@ class CfgPatches {
         requiredAddons[] = {
             "cba_main",
             "ace_main",
+            "ace_common",
             "mawii_main",
-            "ace_medical_engine",
-            "ace_medical_treatment",
-            "WW2_Assets_c_Vehicles_StaticWeapons_c_Flak_38",
-            "WW2_Core_c_WW2_Core_c",
-            "ww2_core_c_if_zzz_lastloaded_c",
-            "ww2_assets_c_weapons_infantryweapons_c"
+            "mawii_ww2_modules",
+            "WW2_Assets_c_Vehicles_Wheeled_c_GMC",
+            "WW2_Core_c_WW2_EditorPreviews_c",
+            "WW2_Assets_c_Vehicles_Pictures_c"
         };
         author = "Moskito Santana";
         url = "https://github.com/MoskitoSantana/mawii";
