@@ -42,7 +42,7 @@ switch (_faction) do {
 			};
 			case ROLE_SQUAD_LEADER : {
 				_unit addWeapon "LIB_Binocular_US";
-				_mainWeapon = (selectRandom [ARR_2(US_MAIN_WEAPON_M1_CARABINE,US_MAIN_WEAPON_M1_GARAND,US_MAIN_WEAPON_THOMPSON)]); 
+				_mainWeapon = (selectRandom [ARR_3(US_MAIN_WEAPON_M1_CARABINE,US_MAIN_WEAPON_M1_GARAND,US_MAIN_WEAPON_THOMPSON)]); 
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,_mainWeapon);
 				ADD_WEAPON_AND_MAGAZINES_ON_VEST(_unit,US_SECONDARY_WEAPON_COLT);
 				ADD_MAGAZINE_CARGO_ON_VEST(_unit,"LIB_US_Mk_2",1,1);
