@@ -4,12 +4,12 @@ on:
   push:
     branches:
     - master
-
+    
 jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - name: Setup HEMTT
         uses: arma-actions/hemtt@v1
       - name: Run HEMTT
@@ -17,6 +17,6 @@ jobs:
       - name: Upload Release
         uses: actions/upload-artifact@v4
         with: 
-          name: mawii-latest-{{github.sha}}
-          path: .hemttout/@*
+          name: "@mawii"
+          path: ".hemttout/release/*"   
           include-hidden-files: true # Because .hemttout is a hidden directory
