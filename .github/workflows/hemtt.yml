@@ -58,24 +58,23 @@ jobs:
       - name: List Dir
         run: ls -R 
 
-      - name: Create Release
-        id: create_release
+      - name: Create GitHub Release
+        id: create-new-release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          release_name: mawii-v${{ needs.build.outputs.VERSION }}
+          release_name: mawii_v${{ needs.build.outputs.VERSION }}
           tag_name: ${{ needs.build.outputs.VERSION }}
-          #draft: false
-          #prerelease: false
-      
-     # - name: Upload Release Asset
-     #   id: upload-release-asset
-     #   uses: actions/upload-release-asset@v1
-     #   env:
-     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     #   with:
-     #     upload_url: ${{ steps.create_release.outputs.upload_url }}
-     #     asset_path: $HOME/mawii.zip
-     #     asset_name: "mawii.zip"
-     #     asset_content_type: application/zip
+
+    
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+          asset_path: ./mawii.zip
+          asset_name: mawii_v${{ needs.build.outputs.VERSION }}.zip
+          asset_content_type: application/zip
