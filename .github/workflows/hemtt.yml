@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: "@mawii"
-          path: ".hemttout/release/*"
+          path: /release/@mawii.zip
           include-hidden-files: true # Because .hemttout is a hidden directory
