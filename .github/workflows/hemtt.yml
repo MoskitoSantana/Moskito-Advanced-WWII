@@ -20,11 +20,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout the source code
+        uses: actions/checkout@master
+
+      - name: Bump Version
+        id: bump_version
+        run: python3 python_code/version_bumper.py increment_patch push_commit
+
       - name: Setup HEMTT
         uses: arma-actions/hemtt@v1
+
       - name: Run HEMTT build
         run: hemtt release
+
       - name: Upload Release
         id: upload_release
         uses: actions/upload-artifact@v4
@@ -32,24 +40,40 @@ jobs:
           name: "@mawii"
           path: ".hemttout/release/*"
           include-hidden-files: true # Because .hemttout is a hidden directory
+    outputs:
+      VERSION: ${{ steps.bump_version.outputs.VERSION }}
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: "@mawii"
+      
+      - name: List Dir
+        run: ls -R
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref_name }}
-          release_name: MAWII ${{ github.ref_name }}
-          body: |
-            Changes in this Release
+          release_name: mawii-v${{ needs.build.outputs.VERSION }}
+          tag_name: ${{ needs.build.outputs.VERSION }}
           draft: false
           prerelease: false
+      
       - name: Upload Release Asset
+        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ".hemttout/release/*"
+          asset_path: ./mawii-latest.zip
           asset_name: "@mawii.zip"
           asset_content_type: application/zip
