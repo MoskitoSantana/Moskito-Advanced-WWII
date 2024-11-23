@@ -4,8 +4,6 @@ on:
   push:
     branches:
     - master
-    tags:
-    - 'v*.*.*'
   pull_request:
 
 jobs:
@@ -26,8 +24,30 @@ jobs:
       - name: Run HEMTT build
         run: hemtt release
       - name: Upload Release
+        id: upload_release
         uses: actions/upload-artifact@v4
         with: 
           name: "@mawii"
-          path: /release/@mawii.zip
+          path: ".hemttout/release/*"
           include-hidden-files: true # Because .hemttout is a hidden directory
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: MAWII Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.upload_release.outputs.upload_url }}
+          asset_path: ".hemttout/release/*"
+          asset_name: "@mawii.zip"
+          asset_content_type: application/zip
