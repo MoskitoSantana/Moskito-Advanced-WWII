@@ -105,9 +105,9 @@ def git_push():
 
     subprocess.call(["git", "add", "-A"])
     subprocess.call(["git", "commit", "-m", commit_msg])
-    subprocess.call(["git", "push", "origin", "master"])
+    subprocess.call(["git", "push", "origin", "main"])
 
-    print("Pushed commit to master: {}".format(commit_msg))
+    print("Pushed commit to main: {}".format(commit_msg))
 
 
 def main(argv):
