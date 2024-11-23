@@ -37,7 +37,7 @@ jobs:
         id: upload_release
         uses: actions/upload-artifact@v4
         with: 
-          name: "@mawii"
+          name: "mawii"
           path: ".hemttout/release/*"
           include-hidden-files: true # Because .hemttout is a hidden directory
     outputs:
@@ -51,10 +51,11 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v3
         with:
-          name: "@mawii"
+          name: "mawii"
+          path: $HOME/
       
       - name: List Dir
-        run: ls -R
+        run: ls -R $HOME
 
       - name: Create Release
         id: create_release
@@ -74,6 +75,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./mawii-latest.zip
-          asset_name: "@mawii.zip"
+          asset_path: $HOME/mawii.zip
+          asset_name: "mawii.zip"
           asset_content_type: application/zip
