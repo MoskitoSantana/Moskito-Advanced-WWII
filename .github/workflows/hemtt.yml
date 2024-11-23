@@ -58,14 +58,14 @@ jobs:
       - name: List Dir
         run: ls -R 
 
-      #- name: Create GitHub Release
-      #  id: create-new-release
-      #  uses: actions/create-release@v1
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #  with:
-      #    release_name: mawii v.${{ needs.build.outputs.VERSION }}
-      #    tag_name: ${{ needs.build.outputs.VERSION }}
+      - name: Create GitHub Release
+        id: create-new-release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_name: mawii v.${{ needs.build.outputs.VERSION }}
+          tag_name: ${{ needs.build.outputs.VERSION }}
 
     
       - name: Upload Release Asset
