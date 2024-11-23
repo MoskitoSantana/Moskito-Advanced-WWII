@@ -25,7 +25,7 @@ jobs:
 
       - name: Bump Version
         id: bump_version
-        run: python3 python_code/version_bumper.py increment_patch push_commit
+        run: python3 python_code/version_bumper.py increment_build push_commit
 
       - name: Setup HEMTT
         uses: arma-actions/hemtt@v1
@@ -58,14 +58,14 @@ jobs:
       - name: List Dir
         run: ls -R 
 
-      - name: Create GitHub Release
-        id: create-new-release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          release_name: mawii_v${{ needs.build.outputs.VERSION }}
-          tag_name: ${{ needs.build.outputs.VERSION }}
+      #- name: Create GitHub Release
+      #  id: create-new-release
+      #  uses: actions/create-release@v1
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  with:
+      #    release_name: mawii v.${{ needs.build.outputs.VERSION }}
+      #    tag_name: ${{ needs.build.outputs.VERSION }}
 
     
       - name: Upload Release Asset
@@ -74,7 +74,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+          upload_url: ${{ github.event.created.release.upload_url }}
           asset_path: ./mawii.zip
           asset_name: mawii_v${{ needs.build.outputs.VERSION }}.zip
           asset_content_type: application/zip
