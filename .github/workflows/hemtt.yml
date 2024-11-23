@@ -37,8 +37,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: "mawii"
-          path: ".hemttout/release/*"
+          path: "./releases/@mawii.zip"
           include-hidden-files: true # Because .hemttout is a hidden directory
+    
     outputs:
       VERSION: ${{ steps.bump_version.outputs.VERSION }}
       ARTIFACT_ID: ${{ steps.upload_release.outputs.artifact-id}}
@@ -74,6 +75,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-          asset_path: ./
+          asset_path: "@mawii.zip"
           asset_name: mawii_v${{ needs.build.outputs.VERSION }}.zip
           asset_content_type: application/zip
