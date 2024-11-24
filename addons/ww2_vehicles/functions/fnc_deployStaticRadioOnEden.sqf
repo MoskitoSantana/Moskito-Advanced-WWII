@@ -30,8 +30,8 @@ _objects = [ARR_4(_table,_phone,_phoneCable,_telegraphpost)];
 _mapControl = (findDisplay 12) displayctrl 51;
 _stationPos = _mapControl posWorldToScreen _vehiclePos;
 
-_marker = createMarker [ format ["Radio_Station %1", mapGridPosition _vehiclePos ], _vehiclePos ];
-_marker setMarkerText format ["Field Radio Station  %1", mapGridPosition _vehiclePos]; 
+_marker = createMarker [ format [(localize "STR_MAWII_ww2_vehicles_RadioStationMarker"), mapGridPosition _vehiclePos ], _vehiclePos ];
+_marker setMarkerText format [(localize "STR_MAWII_ww2_vehicles_RadioStationMarker"), mapGridPosition _vehiclePos]; 
 _marker setMarkerShape "ICON";
 _marker setMarkerType "loc_Transmitter";
 _marker setMarkerColor ([_side,true] call BIS_fnc_sideColor);

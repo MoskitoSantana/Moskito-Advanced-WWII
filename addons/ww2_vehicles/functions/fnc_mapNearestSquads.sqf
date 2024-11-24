@@ -26,7 +26,7 @@ params ["_radioStation","_side"];
 	{ 
 		{
 		if (
-			GETVAR(_x,current_player_description,ROLE_RIFLEMAN) == ROLE_RTO && 
+			GETVAR(_x,current_player_description,(localize "STR_MAWII_ww2_modules_RoleRifleman")) == (localize "STR_MAWII_ww2_modules_RoleRTO") && 
 			([_x, "acex_intelitems_notepad"] call ace_common_fnc_hasMagazine) && 
 			((backpack _x) in ["B_MAWII_US_RADIO_BACKPACK","B_MAWII_GER_RADIO_BACKPACK","B_MAWII_SOV_RADIO_BACKPACK"]) ) then {
 			 	_rtoAllyUnits pushBack (_x) 
@@ -35,8 +35,8 @@ params ["_radioStation","_side"];
 	} forEach _allySquads; 
 
 	{
-		private _unitRole = GETVAR(_x,current_player_description,ROLE_RIFLEMAN);
-		if (_unitRole == ROLE_RTO) then {
+		private _unitRole = GETVAR(_x,current_player_description,(localize "STR_MAWII_ww2_modules_RoleRifleman"));
+		if (_unitRole == (localize "STR_MAWII_ww2_modules_RoleRTO")) then {
 			_rtoUnit = _x;
 			_radio = backpack _x;
 			if ( ([_rtoUnit, "acex_intelitems_notepad"] call ace_common_fnc_hasMagazine) and (_radio in ["B_MAWII_US_RADIO_BACKPACK","B_MAWII_GER_RADIO_BACKPACK","B_MAWII_SOV_RADIO_BACKPACK"]) ) then {
@@ -61,6 +61,6 @@ params ["_radioStation","_side"];
 		} else {continue;};
 	} forEach _rtoAllyUnits;
 
-	hint "Radio Station Deployed";
+	hint (localize "STR_MAWII_ww2_vehicles_ScanSuccess");
 	}, 
-	{hint "Scan Failed"}, "Scanning for nearest squads"] call ace_common_fnc_progressBar;
+	{hint (localize "STR_MAWII_ww2_vehicles_ScanFail")}, localize "STR_MAWII_ww2_vehicles_ScanningForEnemySquads"] call ace_common_fnc_progressBar; 

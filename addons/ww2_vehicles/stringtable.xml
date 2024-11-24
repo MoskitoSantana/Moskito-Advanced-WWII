@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="mawii">
+    <Package name="ww2_vehicles">
+        <Container name="Vehicles Name">
+            <Key ID="STR_MAWII_ww2_vehicles_ZIS5V">
+                <Original>ZIS-5V (Radio)</Original>
+            </Key> 
+            <Key ID="STR_MAWII_ww2_vehicles_GMC">
+                <Original>GMC Truck (Radio)</Original>
+                <Spanish>Camion GMC (Radio)</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_OpelBlitz">
+                <Original>Opel Blitz (Radio)</Original>
+            </Key>
+        </Container>
+        <Container name="Actions">
+            <Key ID="STR_MAWII_ww2_vehicles_DeployFailed">
+                <Original>Radio Station Deploy Fail</Original>
+                <Spanish>Fallo el despliegue de la estacion de radio</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_DeploySuccess">
+                <Original>Radio Station Deployed</Original>
+                <Spanish>Estacion de Radio Desplegada</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_ScanSuccess">
+                <Original>Radio Sniff Success</Original>
+                <Spanish>Escucha de Radio Exitosa</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_ScanFail">
+                <Original>Radio Sniff Failed</Original>
+                <Spanish>Escucha de Radio Fallida</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_DeployingRadioStation">
+                <Original>Deploying Static Radio Station</Original>
+                <Spanish>Desplegando Estación de Radio</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_ScanningForEnemySquads">
+                <Original>Scanning for Nearest Enemy Squads</Original>
+                <Spanish>Buscando Tropas enemigas cercanas</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_DeployStaticRadio">
+                <Original>Deploy Static Radio Station</Original>
+                <Spanish>Desplegar Estación de Radio Estática</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_UndeployStaticRadio">
+                <Original>Undeploy Static Radio Station</Original>
+                <Spanish>Replegar Estación de Radio Estática</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_ScanForSquads">
+                <Original>Scan for Squads in Range</Original>
+                <Spanish>Buscar Escuadras en Rango</Spanish>
+            </Key>
+        </Container>
+        <Container name="Class Attributes">
+            <Key ID="STR_MAWII_ww2_vehicles_DeployStatus">
+                <Original>Deploy Status</Original>
+                <Spanish>Estado de Despliegue</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_vehicles_SniffingRange">
+                <Original>Radio Sniffing Range</Original>
+                <Spanish>Rango de Escucha de la Radio</Spanish>
+            </Key>
+        </Container>
+        <Container name="Map Markers">
+            <Key ID="STR_MAWII_ww2_vehicles_RadioStationMarker">
+                <Original>Radio Station %1</Original>
+                <Spanish>Estación de Radio %1</Spanish>
+            </Key>
+
+        </Container>
+    </Package>
+</Project>

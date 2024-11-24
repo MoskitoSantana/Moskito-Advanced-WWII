@@ -44,9 +44,9 @@ params ["_vehicle","_unit"];
 	SETVAR(_vehicle,mawii_static_radio_station_deploy_status,true); 
 	_vehicle setVariable [ARR_2('mawii_static_radio_station_deployed_objects',_objects)];
 
-	hint "Radio Station Deployed";
+	hint (localize "STR_MAWII_ww2_vehicles_DeploySuccess");
 	}
-	, {hint "Radio Station Deploy Fail!"}, "Deploying Static Radio Station"] call ace_common_fnc_progressBar;
+	, {hint (localize "STR_MAWII_ww2_vehicles_DeployFailed")}, localize "STR_MAWII_ww2_vehicles_DeployingRadioStation"] call ace_common_fnc_progressBar;
 
 
 // QUOTE((GVAR(enableActions) == 1 || {GVAR(enableActions) != 2 && {vehicle _target != _target && {vehicle _target == vehicle _player}}}));
