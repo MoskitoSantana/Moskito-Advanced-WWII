@@ -1,6 +1,6 @@
 class MAWII_ModuleFakAmbient : MAWII_BaseModule {
     scope = 2;
-    displayName = "Flak Ambient";
+    displayName = "$STR_MAWII_ww2_modules_FlakAmbientClassDisplayName";
     icon = "\k\mawii\addons\ww2_modules\data\flak_ambient_icon.paa";
     category = "MAWII";
 
@@ -23,7 +23,7 @@ class MAWII_ModuleFakAmbient : MAWII_BaseModule {
      class Attributes: AttributesBase {
         class NumberOfPositions : Edit {
             property = "MAWII_ModuleFlakAmbient_NumberOfPositions";
-            displayName = "Number of Positions";
+            displayName = "$STR_MAWII_ww2_modules_FlakAmbientClassAttributeNumberOfPositions";
             tooltip = "Number of positions to spawn flak artillery";
             typeName = "NUMBER";
             defaultValue = "10";

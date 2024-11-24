@@ -35,18 +35,18 @@ switch _mode do {
         if (_isActivated) then {
             private _syncObjects = synchronizedObjects _module select {!(_x isKindOf "AnyStaticObject")};
             { 
-                if (_rtoRole) then { [_x, _faction,ROLE_RTO] call FUNC(addRoleActionOnSyncObject); };
-                if (_atRole) then { [_x, _faction,ROLE_AT_SPECIALIST] call FUNC(addRoleActionOnSyncObject); };
-                if (_medicRole) then { [_x, _faction,ROLE_MEDIC] call FUNC(addRoleActionOnSyncObject); };
-                if (_sniperRole) then { [_x, _faction,ROLE_SNIPPER] call FUNC(addRoleActionOnSyncObject); };
-                if (_sapperRole) then { [_x, _faction,ROLE_SAPPER] call FUNC(addRoleActionOnSyncObject); };
-                if (_riflemanRole) then { [_x, _faction,ROLE_RIFLEMAN] call FUNC(addRoleActionOnSyncObject); };
-                if (_squadLeaderRole) then { [_x, _faction,ROLE_SQUAD_LEADER] call FUNC(addRoleActionOnSyncObject); };
-                if (_machinneGunnerRole) then { [_x, _faction,ROLE_MACHINNE_GUNNER] call FUNC(addRoleActionOnSyncObject); };
-                if (_assaultRiflemanRole) then { [_x, _faction,ROLE_ASSAULT_RIFLEMAN] call FUNC(addRoleActionOnSyncObject); };
-                if (_firstClassMachinneGunnerRole) then { [_x,_faction,ROLE_FIRST_CLASS_MACHINNE_GUNNER] call FUNC(addRoleActionOnSyncObject); };
-                if (_pilotRole) then { [_x,_faction,ROLE_PILOT] call FUNC(addRoleActionOnSyncObject); };
-                if (_tankCrewRole) then { [_x,_faction,ROLE_TANK_CREW] call FUNC(addRoleActionOnSyncObject); };
+                if (_rtoRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleRTO")] call FUNC(addRoleActionOnSyncObject); };
+                if (_atRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleATSpecialist")] call FUNC(addRoleActionOnSyncObject); };
+                if (_medicRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleMedic")] call FUNC(addRoleActionOnSyncObject); };
+                if (_sniperRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleSniper")] call FUNC(addRoleActionOnSyncObject); };
+                if (_sapperRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleSapper")] call FUNC(addRoleActionOnSyncObject); };
+                if (_riflemanRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleRifleman")] call FUNC(addRoleActionOnSyncObject); };
+                if (_squadLeaderRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleSquadLeader")] call FUNC(addRoleActionOnSyncObject); };
+                if (_machinneGunnerRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleMachineGunner")] call FUNC(addRoleActionOnSyncObject); };
+                if (_assaultRiflemanRole) then { [_x, _faction,(localize "STR_MAWII_ww2_modules_RoleAssaultRifleman")] call FUNC(addRoleActionOnSyncObject); };
+                if (_firstClassMachinneGunnerRole) then { [_x,_faction,(localize "STR_MAWII_ww2_modules_RoleFirstClassMachinneGunner")] call FUNC(addRoleActionOnSyncObject); };
+                if (_pilotRole) then { [_x,_faction,(localize "STR_MAWII_ww2_modules_RolePilot")] call FUNC(addRoleActionOnSyncObject); };
+                if (_tankCrewRole) then { [_x,_faction,(localize "STR_MAWII_ww2_modules_RoleTankCrew")] call FUNC(addRoleActionOnSyncObject); };
             } forEach _syncObjects;
         } else {
 			hint "ELSE: Select a faction and a squad type";

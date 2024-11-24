@@ -12,7 +12,7 @@ logoOver        = "\k\mawii\addons\main\data\mawii_logo_small.paa";             
 
 tooltip         = "Otro dia la misma mierda";
 tooltipOwned    = "Moskito Santana";                                                                                                          // Tool tip displayed when the mouse is left over, in the main menu
-overview        = "Iwashu :D";                 // Overview text, displayed from the extension menu
+overview        = "This mod was developed to add gameplay dynamics, setting, etc., to the Arma 3 roles for the Battalion 95 (BTN 95) playstyle, facilitating the process of equipping Arma 3 barbies mainly during mission creation.";                 // Overview text, displayed from the extension menu
 
 action          = "https://github.com/MoskitoSantana/Moskito-Advanced-WWII";                                                                                                // Website URL, that can accessed from the expansions menu 
 actionName      = "Github";                                                                                                                        // label of button/tooltip in extension menu
