@@ -12,6 +12,9 @@ params [
 	private _ifTankCrew = (localize "STR_MAWII_ww2_modules_RoleTankCrew");
 	private _ifMedic = (localize "STR_MAWII_ww2_modules_RoleMedic");
 
+	_unit setUnitTrait ["loadCoef", 1];
+
+
 	if (_unitClass in [_ifSapper,_ifTankCrew,_ifPilot]) then {
 		_unit setVariable ["ACE_IsEngineer",1,true];
 		_unit setUnitTrait ["engineer ", true];
