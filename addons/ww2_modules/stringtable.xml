@@ -1,61 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    File: stringtable.xml
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-03-06
-    License: MIT License - http://www.opensource.org/licenses/MIT
+<Project name="mawii">
+    <Package name="ww2_modules">      
+        <Container name="Roles">
+            <Key ID="STR_MAWII_ww2_modules_RoleRTO">
+                <Original>RTO</Original>
+                <Spanish>RTO</Spanish>
+            </Key> 
+            <Key ID="STR_MAWII_ww2_modules_RoleMedic">
+                <Original>Medic</Original>
+                <Spanish>Medico</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RolePilot">
+                <Original>Pilot</Original>
+                <Spanish>Piloto</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleSapper">
+                <Original>Sapper</Original>
+                <Spanish>Zapador</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleSniper">
+                <Original>Sniper</Original>
+                <Spanish>Francotirador</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleRifleman">
+                <Original>Rifleman</Original>
+                <Spanish>Fusilero</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleTankCrew">
+                <Original>Tank Crew</Original>
+                <Spanish>Tanquista</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleSquadLeader">
+                <Original>Squad Leader</Original>
+                <Spanish>Lider de Escuadra</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleATSpecialist">
+                <Original>AT Specialist</Original>
+                <Spanish>Especialista de AT</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleMachineGunner">
+                <Original>Gunny</Original>
+                <Spanish>Ametrallador</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleAssaultRifleman">
+                <Original>Assault Rifleman</Original>
+                <Spanish>Fusilero de Asalto</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_RoleFirstClassMachinneGunner">
+                <Original>First Class Machinne Gunner</Original>
+                <Spanish>Ametrallador de Primera Clase</Spanish>
+            </Key>
+        </Container>
+        <Container name="Actions">
+            <Key ID="STR_MAWII_ww2_modules_ActionEquip">
+                <Original>Equip %1</Original>
+                <Spanish>Armar %1</Spanish>
+            </Key>
+        </Container>
+        <Container name="Factions">
+            <Key ID="STR_MAWII_ww2_modules_FactionUSA">
+                <Original>USA</Original>
+                <Spanish>EEUU</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_FactionUK">
+                <Original>United Kingdom</Original>
+                <Spanish>Reino Unido</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_FactionGermany">
+                <Original>Germany</Original>
+                <Spanish>Alemania</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_FactionSoviets">
+                <Original>Soviet Union</Original>
+                <Spanish>Unión Soviética</Spanish>
+            </Key>
+        </Container>
+        <Container name="Class Display Name">
+            <Key ID="STR_MAWII_ww2_modules_MawiiRoleSelectionAttrSectionClassDisplayName">
+                <Original>MAWII Role Selection</Original>
+                <Spanish>MAWII Seleccion de Rol</Spanish> 
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_GroupRoleSelectorClassDisplayName">
+                <Original>Group Role Selector</Original>
+                <Spanish>Selector de Rol de Grupo</Spanish> 
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_ObjectRoleSelectorClassDisplayName">
+                <Original>Object Role Selector</Original>
+                <Spanish>Objeto Selector de Rol</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_FlakAmbientClassDisplayName">
+                <Original>Flak Ambient</Original>
+                <Spanish>Ambiente de Flak</Spanish>
+            </Key>
+        </Container>
+        <Container name="Class Attributes">
+            <Key ID="STR_MAWII_ww2_modules_ClassAttributeSetRole">
+                <Original>Set Unit Role</Original>
+                <Spanish>Selecciona el Rol de la Unidad</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_ClassAttributePickFaction">
+                <Original>Pick Faction</Original>
+                <Spanish>Selecciona una faccion</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_FlakAmbientClassAttributeNumberOfPositions">
+                <Original>Number of Positions</Original>
+                <Spanish>Numero de posiciones</Spanish>
+            </Key>
+            <Key ID="STR_MAWII_ww2_modules_ObjectRoleSelectorClassAttributeOnStart">
+                <Original>On Mission Start</Original>
+                <Spanish>Al iniciar la mision</Spanish>
 
-    Localization contributors:
-        English | Updated: 0.96.7a
-            KP Liberation Dev Team  - https://github.com/KillahPotatoes
-
-        Chinese Simplified | Updated: pre 0.96.7a
-            Nercon                  - https://github.com/nercon
-
-        Chinese Traditional | Updated: pre 0.96.7a
-            dustin902001            - https://github.com/dustin902001
-            John M. Rodriguez       - https://github.com/KOEI5113
-
-        French | Updated: pre 0.96.7a
-            zbug                    - https://github.com/GreuhZbug
-
-        German | Updated: 0.96.7a
-            Wyqer                   - https://github.com/Wyqer
-
-        Italian | Updated: pre 0.96.7a
-            k4s0                    - https://github.com/k4s0
-
-        Portuguese | Updated: pre 0.96.7a
-            NomadRomeo              - https://github.com/NomadRomeo
-            AngusDLX                - https://github.com/AngusDLX
-
-        Russian | Updated: pre 0.96.7a
-            _KOC_                   - Constantin.rogozin@ya.ru
-            Dj_Haski                - https://github.com/DjHaski
-
-        Spanish | Updated: pre 0.96.7a
-            amunoz20                - https://github.com/amunoz20
-            regiregi22              - https://github.com/regiregi22
-
-        Turkish | Updated: pre 0.96.7a
-            Carbneth                - https://github.com/Carbneth
-
-        Czech | Updated: 0.96.7a
-            MJVEVERUSKA             - https://github.com/MJVEVERUSKA
--->
-<Project name="MAWII">
-    <Package name="Modules">
-        <Key ID="STR_MAWII_WW2_Modules_Rifleman">
-            <Original>Rifleman</Original>
-            <Spanish>Fusilero</Spanish>
-        </Key>
-        <Key ID="STR_MAWII_WW2_Modules_RTO">
-            <Original>RTO</Original>
-            <Spanish>RTO</Spanish>
-        </Key>
-        <Key ID="STR_MAWII_WW2_Modules_TankCrew">
-            <Original>Tank_Crew</Original>
-            <Spanish>Tripulacion_de_Tanque</Spanish>
-        </Key>     
+            </Key>
+        </Container>
     </Package>
 </Project>

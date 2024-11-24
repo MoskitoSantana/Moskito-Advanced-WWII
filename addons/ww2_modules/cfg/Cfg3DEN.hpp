@@ -4,68 +4,68 @@ class Cfg3DEN {
     class Object {
         class AttributeCategories {
             class current_role_description {
-                displayName = "MAWII Role Selection";
+                displayName = "$STR_MAWII_ww2_modules_MawiiRoleSelectionAttrSectionClassDisplayName";
                 collapsed = 0;
                 class Attributes {
                     class CustomRole {
-                        displayName = "Set Custom Role";
+                        displayName = "$STR_MAWII_ww2_modules_ClassAttributeSetRole";
                         tooltip = "Assign Custom Role To the Unit";
                         property = "PlayerRoleSelection";
                         control = "Combo";
                         expression = "_this setVariable [ 'current_player_description', _value, true]; systemChat format ['%1 role is %2 stored in variable %3', _this, _value, 'current_player_description'];";
-                        defaultValue = ROLE_RIFLEMAN;
+                        defaultValue = "$STR_MAWII_ww2_modules_RoleRifleman";
                         unique = 0;
-                        validate = "variable";
+                        validate = "none";
                         condition = "objectControllable";
                         typeName = "STRING";
                        	class Values {
                             class C_ASSAULT_RIFFLEMAN {
-                                name = DISPLAY_ROLE_NAME_ASSAULT_RIFLEMAN;
-                                value = ROLE_ASSAULT_RIFLEMAN;
+                                name = "$STR_MAWII_ww2_modules_RoleAssaultRifleman";
+                                value = "$STR_MAWII_ww2_modules_RoleAssaultRifleman";
                             };
                             class C_AT {
-                                name = DISPLAY_ROLE_NAME_AT_SPECIALIST;
-                                value = ROLE_AT_SPECIALIST;
+                                name = "$STR_MAWII_ww2_modules_RoleATSpecialist";
+                                value = "$STR_MAWII_ww2_modules_RoleATSpecialist";
                             };
                             class C_FIRST_CLASS_MACHINNE_GUNNER {
-                                name = DISPLAY_ROLE_NAME_FIRST_CLASS_MACHINNE_GUNNER;
-                                value = ROLE_FIRST_CLASS_MACHINNE_GUNNER;
+                                name = "$STR_MAWII_ww2_modules_RoleFirstClassMachinneGunner";
+                                value = "$STR_MAWII_ww2_modules_RoleFirstClassMachinneGunner";
                             };
                             class C_MACHINNE_GUNNER {
-                                name = DISPLAY_ROLE_NAME_MACHINNE_GUNNER;
-                                value = ROLE_MACHINNE_GUNNER;
+                                name = "$STR_MAWII_ww2_modules_RoleMachineGunner";
+                                value = "$STR_MAWII_ww2_modules_RoleMachineGunner";
                             };
                             class C_PILOT {
-                                name = DISPLAY_ROLE_NAME_PILOT;
-                                value = ROLE_PILOT;
+                                name = "$STR_MAWII_ww2_modules_RolePilot";
+                                value = "$STR_MAWII_ww2_modules_RolePilot";
                             };
                             class C_RIFLEMAN {
-                                name = DISPLAY_ROLE_NAME_RIFLEMAN;
-                                value = ROLE_RIFLEMAN;
+                                name = "$STR_MAWII_ww2_modules_RoleRifleman";
+                                value = "$STR_MAWII_ww2_modules_RoleRifleman";
                             };
                             class C_SAPPER {
-                                name = DISPLAY_ROLE_NAME_SAPPER;
-                                value = ROLE_SAPPER;
+                                name = "$STR_MAWII_ww2_modules_RoleSapper";
+                                value = "$STR_MAWII_ww2_modules_RoleSapper";
                             };
                             class C_SNIPER {
-                                name = DISPLAY_ROLE_NAME_SNIPPER;
-                                value = ROLE_SNIPPER;
+                                name = "$STR_MAWII_ww2_modules_RoleSniper";
+                                value = "$STR_MAWII_ww2_modules_RoleSniper";
                             };
                             class C_SQUAD_LEADER {
-                                name = DISPLAY_ROLE_NAME_SQUAD_LEADER;
-                                value = ROLE_SQUAD_LEADER;
+                                name = "$STR_MAWII_ww2_modules_RoleSquadLeader";
+                                value = "$STR_MAWII_ww2_modules_RoleSquadLeader";
                             };
                             class C_TANK_CREW {
-                                name = DISPLAY_ROLE_NAME_TANK_CREW;
+                                name = "$STR_MAWII_ww2_modules_RoleTankCrew";
                                 value = ROLE_TANK_CREW;
                             };
                             class C_RTO {
-                                name = DISPLAY_ROLE_NAME_RTO;
-                                value = ROLE_RTO;
+                                name = "$STR_MAWII_ww2_modules_RoleRTO";
+                                value = "$STR_MAWII_ww2_modules_RoleTankCrew";
                             };
                             class C_MEDIC {
-                                name = DISPLAY_ROLE_NAME_MEDIC;
-                                value = ROLE_MEDIC;
+                                name = "$STR_MAWII_ww2_modules_RoleMedic";
+                                value = "$STR_MAWII_ww2_modules_RoleMedic";
                             };
 
                         }; 

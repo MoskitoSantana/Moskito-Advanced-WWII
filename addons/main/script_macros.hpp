@@ -6,14 +6,8 @@
 #define CHECK_IF_IS_ACE_ENGINEER(unit) GETVAR((unit),ace_isEngineer,0) 
 #define CHECK_IF_IS_ACE_MEDIC(unit) GETVAR((unit),ace_medical_medicclass,0)
 
-#define SET_AS_ACE_EOD_IF(unit,condition) SETPVAR((unit),ACE_isEOD,(condition))
-#define SET_AS_ACE_ENGINEER_IF(unit,condition) SETPVAR((unit),ace_isEngineer,(condition))
-#define SET_AS_ACE_MEDIC_IF(unit,condition) SETPVAR((unit),ace_medical_medicclass,(condition))
-
-#define SET_VANILLA_TRAIT_IF(unit,trait,value) (unit) setUnitTrait [ #trait , (value) ]
-
-#define IS_ROLE(unitclass,role) if (unitclass == role) then [{1},{0}]
-#define IS_ROLE_BOOL(unitclass,role) if (unitclass == role) then [{true},{false}]
+#define IS_ROLE(unitclass,role) if ((unitclass == role)) then [{1},{0}]
+#define IS_ROLE_BOOL(unitclass,role) if ((unitclass == role)) then [{true},{false}]
 
 #define IS_ROLE_VAR(unit,role,target) if (GETVAR((unit),current_player_description,(role)) == (target)) then [{true},{false}]
 

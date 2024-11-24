@@ -9,7 +9,6 @@ class CfgPatches {
         requiredAddons[] = {
             "cba_main",
             "ace_main",
-            //"simc_uaf_44"
         };
         author = "Moskito Santana";
         VERSION_CONFIG;

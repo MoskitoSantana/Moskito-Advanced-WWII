@@ -34,13 +34,13 @@ switch _mode do {
         if (is3DEN) exitWith {
             private _syncObjects = synchronizedObjects _module select {!(_x isKindOf "AnyBrain")};
             { 
-                [_x, _faction, _x getVariable ['current_player_description', ROLE_RIFLEMAN] ] call FUNC(addRoleOnStartup);
+                [_x, _faction, _x getVariable ['current_player_description', (localize "STR_MAWII_ww2_modules_RoleRifleman")] ] call FUNC(addRoleOnStartup);
             } forEach _syncObjects;
         };
         if (_isActivated) then {
             private _syncObjects = synchronizedObjects _module select {!(_x isKindOf "AnyBrain")};
             { 
-                [_x, _faction, _x getVariable ['current_player_description', ROLE_RIFLEMAN] ] call FUNC(addRoleOnStartup);
+                [_x, _faction, _x getVariable ['current_player_description', (localize "STR_MAWII_ww2_modules_RoleRifleman")] ] call FUNC(addRoleOnStartup);
             } forEach _syncObjects;
         } else {
 			hint "ELSE: Select a faction and a squad type";

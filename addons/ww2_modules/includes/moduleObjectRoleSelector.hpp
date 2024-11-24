@@ -1,6 +1,6 @@
 class MAWII_ModuleRoleSelector : MAWII_BaseModule {
     scope = 2;
-    displayName = "Object Role Selector";
+    displayName = "$STR_MAWII_ww2_modules_ObjectRoleSelectorClassDisplayName";
     icon = "\k\mawii\addons\ww2_modules\data\object_role_setup.paa";
     category = "MAWII";
 
@@ -24,23 +24,23 @@ class MAWII_ModuleRoleSelector : MAWII_BaseModule {
      class Attributes: AttributesBase {
         class FactionSelector : Combo {
             property = "MAWII_ModuleRoleSetUp_Role";
-            displayName = "Pick Faction";
+            displayName = "$STR_MAWII_ww2_modules_ClassAttributePickFaction";
             tooltip = "Selecciona una faccion para los equipamientos";
             typeName = "NUMBER";
             defaultValue = 0x771;
     
             class Values {
-            	class UK { name = "United Kingdom";	value = 0x770; };
-            	class USA { name = "USA";	value = 0x771; }; 
-            	class GER { name = "Germany";	value = 0x772; };
-            	class SOV { name = "Soviets";	value = 0x773; };
+            	class UK { name = "$STR_MAWII_ww2_modules_FactionUK";	value = 0x770; };
+            	class USA { name = "$STR_MAWII_ww2_modules_FactionUSA";	value = 0x771; }; 
+            	class GER { name = "$STR_MAWII_ww2_modules_FactionGermany";	value = 0x772; };
+            	class SOV { name = "$STR_MAWII_ww2_modules_FactionSoviets";	value = 0x773; };
             };
 
         };
 
         class OnStart : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_OnStart);
-            displayName = "On Mission Start";
+            displayName = "$STR_MAWII_ww2_modules_ObjectRoleSelectorClassAttributeOnStart";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
@@ -48,7 +48,7 @@ class MAWII_ModuleRoleSelector : MAWII_BaseModule {
 
         class RoleRTO : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleRTO);
-            displayName = "RTO";
+            displayName = "$STR_MAWII_ww2_modules_RoleRTO";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
@@ -56,21 +56,21 @@ class MAWII_ModuleRoleSelector : MAWII_BaseModule {
 
         class RoleMedic : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleMedic);
-            displayName = "Medic";
+            displayName = "$STR_MAWII_ww2_modules_RoleMedic";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
         class RoleSapper : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleSapper);
-            displayName = "Sapper";
+            displayName = "$STR_MAWII_ww2_modules_RoleSapper";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
         class RoleSquadLeader : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleSquadLeader);
-            displayName = "Squad Leader";
+            displayName = "$STR_MAWII_ww2_modules_RoleSquadLeader";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
@@ -78,56 +78,56 @@ class MAWII_ModuleRoleSelector : MAWII_BaseModule {
         };
         class RoleRifleman : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleRifleman);
-            displayName = "Rifleman";
+            displayName = "$STR_MAWII_ww2_modules_RoleRifleman";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
         class RoleMachinneGunner : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleMachinneGunner);
-            displayName = "Machinne Gunner";
+            displayName = "$STR_MAWII_ww2_modules_RoleMachineGunner";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
         class RoleFirstClassMachinneGunner : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleFirstClassMachinneGunner);
-            displayName = "First Class Machinne Gunner";
+            displayName = "$STR_MAWII_ww2_modules_RoleFirstClassMachinneGunner";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
         class RoleSniper : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleSnipper);
-            displayName = "Sniper";
+            displayName = "$STR_MAWII_ww2_modules_RoleSniper";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
          class RoleAT : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleAT);
-            displayName = "AT Specialist";
+            displayName = "$STR_MAWII_ww2_modules_RoleATSpecialist";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
          class RoleAssaultRifleman : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleAssaultRifleman);
-            displayName = "Assault Rifleman";
+            displayName = "$STR_MAWII_ww2_modules_RoleAssaultRifleman";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
         class RoleTankCrew : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RoleTankCrew);
-            displayName = "Tank Crew";
+            displayName = "$STR_MAWII_ww2_modules_RoleTankCrew";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";
         };
         class RolePilot : Checkbox {
             property = QGVAR(MAWII_ModuleRoleSelector_RolePilot);
-            displayName = "Pilot";
+            displayName = "$STR_MAWII_ww2_modules_RolePilot";
             tooltip = "";
             defaultValue = "true";
             typeName = "BOOL";

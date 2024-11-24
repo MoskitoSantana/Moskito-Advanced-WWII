@@ -1,6 +1,6 @@
 class MAWII_ModuleRoleSelectorForGroups : MAWII_BaseModule {
     scope = 2;
-    displayName = "Group Role Selector";
+    displayName = "$STR_MAWII_ww2_modules_GroupRoleSelectorClassDisplayName";
     icon = "\k\mawii\addons\ww2_modules\data\group_role_setup.paa";
     category = "MAWII";
 
@@ -23,16 +23,16 @@ class MAWII_ModuleRoleSelectorForGroups : MAWII_BaseModule {
      class Attributes: AttributesBase {
         class FactionSelector : Combo {
             property = "MAWII_ModuleGroupRoleSetUp_Role";
-            displayName = "Pick Faction";
+            displayName = "$STR_MAWII_ww2_modules_ClassAttributePickFaction";
             tooltip = "Selecciona una faccion para los equipamientos";
             typeName = "NUMBER";
             defaultValue = 0x771;
     
             class Values {
-            	class UK	{ name = "United Kingdom";	value = 0x770; };
-            	class USA	{ name = "USA";	value = 0x771; }; 
-            	class GER	{ name = "Germany";	value = 0x772; };
-            	class SOV	{ name = "Soviets";	value = 0x773; };
+            	class UK	{ name = "$STR_MAWII_ww2_modules_FactionUK";	value = 0x770; };
+            	class USA	{ name = "$STR_MAWII_ww2_modules_FactionUSA";	value = 0x771; }; 
+            	class GER	{ name = "$STR_MAWII_ww2_modules_FactionGermany";	value = 0x772; };
+            	class SOV	{ name = "$STR_MAWII_ww2_modules_FactionSoviets";	value = 0x773; };
             };
 
         };
